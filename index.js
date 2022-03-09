@@ -5,7 +5,8 @@ const cors = require("cors");
 const {Server} = require("socket.io");
 app.use(cors());
 
-const PORT = 3001;
+const URL = 'localhost';
+const PORT = 3002;
 const server = http.createServer(app);
 let onlineUsers = [];
 
@@ -21,14 +22,15 @@ const getUsersFromRoom = (room) => {
 }
 
 io.on("connection", (socket) => {
-  console.log(`User Connected: ${socket.id}`);
+  // console.log(`User Connected: ${socket.id}`);
 
   socket.on("join_room", ({username, room}) => {
+    // console.log(`User ${username} - ${socket.id} connected to ${room}`);
+
     socket.join(room);
 
     const userData = {socketId: socket.id, username, room}
     onlineUsers.push(userData);
-    // console.log(`User ${username} - ${socket.id} connected to ${room}`);
 
     socket.to(room).emit("receive_message", {
       room: room,
@@ -47,7 +49,7 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     const index = onlineUsers.findIndex(obj => obj.socketId === socket.id);
     const disconnectedUser = onlineUsers[index];
-    console.log('disconnect ', disconnectedUser)
+    // console.log('disconnect ', disconnectedUser)
     if (index < 0) return 0;
 
     onlineUsers = onlineUsers.filter(obj => obj.socketId !== socket.id);
@@ -66,6 +68,6 @@ app.get('/users', (req, res) => {
   return res.status(200).json(getUsersFromRoom(req.query.room));
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, URL, () => {
   console.log("SERVER RUNNING");
 });
