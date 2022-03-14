@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="Last commit">
+    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../widget" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -65,7 +65,9 @@
       <workItem from="1646399047270" duration="880000" />
       <workItem from="1646400280288" duration="1238000" />
       <workItem from="1646405375079" duration="7000" />
-      <workItem from="1646845380197" duration="243000" />
+      <workItem from="1646845380197" duration="6516000" />
+      <workItem from="1646913463043" duration="1281000" />
+      <workItem from="1647300264783" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1646310688141</created>
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646400314558</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="config">
+      <created>1646845637520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646845637520</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +110,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working" />
     <MESSAGE value="Last commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
+    <MESSAGE value="config" />
+    <option name="LAST_COMMIT_MESSAGE" value="config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

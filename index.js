@@ -32,9 +32,10 @@ io.on("connection", (socket) => {
     const userData = {socketId: socket.id, username, room}
     onlineUsers.push(userData);
 
-    socket.to(room).emit("receive_message", {
+    socket.to(room).emit("receive_bot_message", {
       room: room,
-      author: {name: 'BOT', is_bot: true},
+      is_bot: true,
+      author: 'BOT',
       type: 'CONNECTION',
       message: `${username} has joined`,
       time: new Date().toISOString()
@@ -53,9 +54,10 @@ io.on("connection", (socket) => {
     if (index < 0) return 0;
 
     onlineUsers = onlineUsers.filter(obj => obj.socketId !== socket.id);
-    socket.to(disconnectedUser.room).emit("receive_message", {
+    socket.to(disconnectedUser.room).emit("receive_bot_message", {
       room: disconnectedUser.room,
-      author: {name: 'BOT', is_bot: true},
+      is_bot: true,
+      author: 'BOT',
       type: 'DISCONNECTION',
       message: `${disconnectedUser.username} has left`,
       time: new Date().toISOString()
