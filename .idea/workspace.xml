@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="config">
+    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="last Things">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginxdockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejsdockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../widget" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,6 +52,11 @@
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="C:\Users\marci\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.6777.57\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marci\Desktop\Projects\Chat\server" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,7 +78,12 @@
       <workItem from="1646405375079" duration="7000" />
       <workItem from="1646845380197" duration="6516000" />
       <workItem from="1646913463043" duration="1281000" />
-      <workItem from="1647300264783" duration="999000" />
+      <workItem from="1647300264783" duration="1537000" />
+      <workItem from="1647303536692" duration="240000" />
+      <workItem from="1647423658447" duration="860000" />
+      <workItem from="1647641930653" duration="31000" />
+      <workItem from="1647642673273" duration="71000" />
+      <workItem from="1648207997747" duration="91000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1646310688141</created>
@@ -90,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646845637520</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="last Things">
+      <created>1647301421361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647301421361</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +134,8 @@
     <MESSAGE value="working" />
     <MESSAGE value="Last commit" />
     <MESSAGE value="config" />
-    <option name="LAST_COMMIT_MESSAGE" value="config" />
+    <MESSAGE value="last Things" />
+    <option name="LAST_COMMIT_MESSAGE" value="last Things" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

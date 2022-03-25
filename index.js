@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const http = require("http");
-const cors = require("cors");
-const {Server} = require("socket.io");
+const http = require('http');
+const cors = require('cors');
+const { Server } = require('socket.io');
 app.use(cors());
 
 const URL = 'localhost';
@@ -12,27 +12,23 @@ let onlineUsers = [];
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
+    origin: '*',
+    methods: ['GET', 'POST'],
   },
 });
 
 const getUsersFromRoom = (room) => {
   return onlineUsers.filter(obj => obj.room === room);
-}
+};
 
-io.on("connection", (socket) => {
-  // console.log(`User Connected: ${socket.id}`);
-
-  socket.on("join_room", ({username, room}) => {
-    // console.log(`User ${username} - ${socket.id} connected to ${room}`);
-
+io.on('connection', (socket) => {
+  socket.on('join_room', ({ username, room }) => {
     socket.join(room);
 
-    const userData = {socketId: socket.id, username, room}
+    const userData = { socketId: socket.id, username, room };
     onlineUsers.push(userData);
 
-    socket.to(room).emit("receive_bot_message", {
+    socket.to(room).emit('receive_bot_message', {
       room: room,
       is_bot: true,
       author: 'BOT',
@@ -40,21 +36,20 @@ io.on("connection", (socket) => {
       message: `${username} has joined`,
       time: new Date().toISOString()
     });
-    socket.to(room).emit("users_in_room", onlineUsers);
+    socket.to(room).emit('users_in_room', onlineUsers);
   });
 
-  socket.on("send_message", (msgObj) => {
-    socket.to(msgObj.room).emit("receive_message", msgObj);
+  socket.on('send_message', (msgObj) => {
+    socket.to(msgObj.room).emit('receive_message', msgObj);
   });
 
-  socket.on("disconnect", () => {
+  socket.on('disconnect', () => {
     const index = onlineUsers.findIndex(obj => obj.socketId === socket.id);
     const disconnectedUser = onlineUsers[index];
-    // console.log('disconnect ', disconnectedUser)
     if (index < 0) return 0;
 
     onlineUsers = onlineUsers.filter(obj => obj.socketId !== socket.id);
-    socket.to(disconnectedUser.room).emit("receive_bot_message", {
+    socket.to(disconnectedUser.room).emit('receive_bot_message', {
       room: disconnectedUser.room,
       is_bot: true,
       author: 'BOT',
@@ -62,7 +57,7 @@ io.on("connection", (socket) => {
       message: `${disconnectedUser.username} has left`,
       time: new Date().toISOString()
     });
-    socket.to(disconnectedUser.room).emit("users_in_room", getUsersFromRoom(disconnectedUser.room));
+    socket.to(disconnectedUser.room).emit('users_in_room', getUsersFromRoom(disconnectedUser.room));
   });
 });
 
@@ -71,5 +66,5 @@ app.get('/users', (req, res) => {
 });
 
 server.listen(PORT, URL, () => {
-  console.log("SERVER RUNNING");
+  console.log('SERVER RUNNING');
 });
