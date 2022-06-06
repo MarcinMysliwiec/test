@@ -49,9 +49,9 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send_message", (msg) => {
-    // const msgObj = JSON.parse(msg);
-    console.log("send_message", msg);
-    socket.to(GLOBAL_ROOM).emit("receive_message", msg);
+    const msgObj = JSON.parse(msg);
+    console.log("send_message", msgObj);
+    socket.to(GLOBAL_ROOM).emit("receive_message", msgObj);
   });
 
   socket.on("disconnect", () => {
