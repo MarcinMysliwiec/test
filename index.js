@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send_message", (msgObj) => {
-    socket.to(msgObj.room).emit("receive_message", msgObj);
+    socket.to(GLOBAL_ROOM).emit("receive_message", msgObj);
   });
 
   socket.on("disconnect", () => {
@@ -54,15 +54,13 @@ io.on("connection", (socket) => {
     if (index < 0) return 0;
 
     onlineUsers = onlineUsers.filter((obj) => obj.socketId !== socket.id);
-    socket.to(disconnectedUser.room).emit("bot_message", {
+    socket.to(GLOBAL_ROOM).emit("bot_message", {
       username: "BOT",
       message: `${username} has left.`,
       // type: "CONNECTION",
       // time: new Date().toISOString(),
     });
-    socket
-      .to(disconnectedUser.room)
-      .emit("users_in_room", getUsersFromRoom(disconnectedUser.room));
+    socket.to(GLOBAL_ROOM).emit("users_in_room", getUsersFromRoom(GLOBAL_ROOM));
   });
 });
 
