@@ -7,7 +7,7 @@ app.use(cors());
 
 const GLOBAL_ROOM = "global";
 const URL = "localhost";
-const PORT = 3003;
+const PORT = 3333;
 const server = http.createServer(app);
 let onlineUsers = [];
 
