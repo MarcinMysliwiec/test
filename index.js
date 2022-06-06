@@ -23,9 +23,9 @@ const getUsersFromRoom = (room) => {
 };
 
 io.on("connection", (socket) => {
-  console.log("connection", socket);
+  console.log("connection");
 
-  socket.on("join_global", ({ username }) => {
+  socket.on("join_global", (username) => {
     console.log("join_global", username);
 
     socket.join(GLOBAL_ROOM);
@@ -49,6 +49,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send_message", (msgObj) => {
+    const msgObj = JSON.parse(msgObj);
     console.log("send_message", msgObj);
     socket.to(GLOBAL_ROOM).emit("receive_message", msgObj);
   });
