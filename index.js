@@ -48,8 +48,8 @@ io.on("connection", (socket) => {
     socket.to(GLOBAL_ROOM).emit("users_in_room", onlineUsers);
   });
 
-  socket.on("send_message", (msgObj) => {
-    const msgObj = JSON.parse(msgObj);
+  socket.on("send_message", (msg) => {
+    const msgObj = JSON.parse(msg);
     console.log("send_message", msgObj);
     socket.to(GLOBAL_ROOM).emit("receive_message", msgObj);
   });
