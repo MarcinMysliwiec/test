@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="last Things">
+    <list default="true" id="acd05687-382e-4105-8946-ff5d73d1a7be" name="Changes" comment="1.0.0 Cleanup">
       <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/default.conf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/nginxdockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/nodejsdockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,7 @@
       <workItem from="1647423658447" duration="860000" />
       <workItem from="1647641930653" duration="31000" />
       <workItem from="1647642673273" duration="71000" />
-      <workItem from="1648207997747" duration="91000" />
+      <workItem from="1648207997747" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1646310688141</created>
@@ -113,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647301421361</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.0.0 Cleanup">
+      <created>1648208125192</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648208125192</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +139,8 @@
     <MESSAGE value="Last commit" />
     <MESSAGE value="config" />
     <MESSAGE value="last Things" />
-    <option name="LAST_COMMIT_MESSAGE" value="last Things" />
+    <MESSAGE value="1.0.0 Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.0 Cleanup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
