@@ -25,28 +25,28 @@ const getUsersFromRoom = (room) => {
 io.on("connection", (socket) => {
   console.log("connection");
 
-  socket.on("join_global", (username) => {
-    console.log("join_global", username);
+  // socket.on("join_global", (username) => {
+  //   console.log("join_global", username);
 
-    socket.join(GLOBAL_ROOM);
+  //   socket.join(GLOBAL_ROOM);
 
-    const userData = {
-      username,
-      socketId: socket.id,
-      room: GLOBAL_ROOM,
-    };
+  //   const userData = {
+  //     username,
+  //     socketId: socket.id,
+  //     room: GLOBAL_ROOM,
+  //   };
 
-    onlineUsers.push(userData);
+  //   onlineUsers.push(userData);
 
-    socket.to(GLOBAL_ROOM).emit("bot_message", {
-      username: "BOT",
-      message: `${username} has joined.`,
-      // type: "CONNECTION",
-      // time: new Date().toISOString(),
-    });
+  //   socket.to(GLOBAL_ROOM).emit("bot_message", {
+  //     username: "BOT",
+  //     message: `${username} has joined.`,
+  //     // type: "CONNECTION",
+  //     // time: new Date().toISOString(),
+  //   });
 
-    socket.to(GLOBAL_ROOM).emit("users_in_room", onlineUsers);
-  });
+  //   socket.to(GLOBAL_ROOM).emit("users_in_room", onlineUsers);
+  // });
 
   socket.on("send_message", (msg) => {
     // const msgObj = JSON.parse(msg);
